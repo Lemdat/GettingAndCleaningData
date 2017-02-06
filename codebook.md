@@ -2,8 +2,7 @@
 
 ### Where the data comes from and how they were obtained
 
-to build the data set, data are downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and decompressed
-Train and test dataset are merged.
+The train and test dataset are merged.
 Subject id and activity are extracted from subject_train|test.txt and y_train|test repectively 
 Variable contaning the mean and standard deviation of the different signals are extracted and averaged for each activity and subject. (for detailed information on the signals present in the original data set, see end of document)
 

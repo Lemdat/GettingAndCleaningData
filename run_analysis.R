@@ -3,32 +3,26 @@
 library(dplyr)
 library(reshape2)
 
-    # download and unzip data
-
-if (!dir.exists("./data")) dir.create("data")
-fileurl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-download.file(fileurl, "./data/data.zip")
-unzip("./data/data.zip", exdir = "./data")
 
     # merge data set for x y and subject are created
     #     merge X_train with X_test. set colnames using lines from feature.txt
 
-x_train <- read.table("./data/UCI HAR Dataset/train/X_train.txt")
-x_test <- read.table("./data/UCI HAR Dataset/test/X_test.txt")
+x_train <- read.table("./UCI HAR Dataset/train/X_train.txt")
+x_test <- read.table("./UCI HAR Dataset/test/X_test.txt")
 x_data <- rbind(x_train, x_test)
-colnames(x_data) <- readLines("./data/UCI HAR Dataset/features.txt")
+colnames(x_data) <- readLines("./UCI HAR Dataset/features.txt")
 
     #     merge y_train with y_test
 
-y_train <- read.table("./data/UCI HAR Dataset/train/y_train.txt")
-y_test <- read.table("./data/UCI HAR Dataset/test/y_test.txt")
+y_train <- read.table("./UCI HAR Dataset/train/y_train.txt")
+y_test <- read.table("./UCI HAR Dataset/test/y_test.txt")
 y_data <- rbind(y_train, y_test)
 colnames(y_data) <- "activity"
 
     #     merge subject_train with subject_test
 
-subject_train <- read.table("./data/UCI HAR Dataset/train/subject_train.txt")
-subject_test <- read.table("./data/UCI HAR Dataset/test/subject_test.txt")
+subject_train <- read.table("./UCI HAR Dataset/train/subject_train.txt")
+subject_test <- read.table("./UCI HAR Dataset/test/subject_test.txt")
 subject_data <- rbind(subject_train, subject_test)
 colnames(subject_data) <- "subject_id"
 
@@ -44,7 +38,7 @@ dataset <- select(dataset, c(subject_id,activity,grep("std|mean\\(",colnames(dat
     # change activity column to descriptive activity name
     # get activity name from activity_labels.txt
 
-activitylabel <- read.table("./data/UCI HAR Dataset/activity_labels.txt")
+activitylabel <- read.table("./UCI HAR Dataset/activity_labels.txt")
 dataset$activity <- activitylabel[dataset$activity,2]
 
     # Change labels of the data set variable

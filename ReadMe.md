@@ -9,7 +9,6 @@ This repository contains the files required for the *Getting and Cleaning Data* 
 ### Script
 
 #### Data
-The script download the data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and unzip in *./data/*.
 The data consist of a test and train dataset collected from the accelerometers from the Samsung Galaxy S smartphone.
 The raw data are found in ./UCI HAR dataset/train|test/inertials.
 The variables computed from the raw data and used in the script are in  ./UCI HAR dataset/train|test/X_train|test.txt and described in details in  ./UCI HAR dataset/features_info.txt
