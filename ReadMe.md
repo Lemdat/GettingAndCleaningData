@@ -2,7 +2,7 @@
 
 This repository contains the files required for the *Getting and Cleaning Data* Course Project:
 - script performing the required analysis: run_analysis.R
-- the tidy dataset return by the script : tidy_data_set.csv
+- the tidy dataset return by the script : tidy_data_set.txt
 - the codebook describing the dataset variables and how they were obtained: codebook.md
 - the present readme file: ReadMe.md
 
@@ -18,5 +18,4 @@ The subject and activity index are in ./UCI HAR dataset/train|test/subject_train
 #### Actions performed on the data
 The training and test set are merged and tidied.
 The variables from the data set reporting means and standard deviations are extracted. (see codebook for details)
-The average fo this value for each subject and each activity is computed and saved in the file .
-The tidy data set is saved in a csv file with headers.
+The average fo this value for each subject and each activity is computed and saved in the file tidy_data_set.txt.

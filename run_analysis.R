@@ -65,7 +65,7 @@ aver_dataset <- dcast(melt_dataset, subject_id + activity ~ variable,mean)
 
     # write dataset in csv file
 
-write.csv(aver_dataset,"tidy_data_set.csv")
+write.table(aver_dataset,"tidy_data_set.txt", row.names = FALSE)
 
 
 
